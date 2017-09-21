@@ -2,7 +2,7 @@
   "name": "elasticio-keenio-logger",
   "version": "1.0.0",
   "description": "Simple helper library for recording errors and transactions in elastic.io to keen.io",
-  "main": "index.js",
+  "main": "src/logger.js",
   "scripts": {
     "test": "node tests/logger.js"
   },
