@@ -3,7 +3,7 @@ Simple helper library for recording errors and transactions in elastic.io to kee
 
 ### Installation
 
-> npm install --save latheesan-k/elasticio-keenio-logger
+> npm i -S elasticio-keenio-logger
 
 ### Usage
 
