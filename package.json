@@ -1,0 +1,32 @@
+{
+  "name": "elasticio-keenio-logger",
+  "version": "1.0.0",
+  "description": "Simple helper library for recording errors and transactions in elastic.io to keen.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests/logger.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/latheesan-k/elasticio-keenio-logger.git"
+  },
+  "keywords": [
+    "elasticio",
+    "keenio",
+    "log",
+    "logger",
+    "error",
+    "transaction",
+    "latheesan",
+    "kanesamoorthy"
+  ],
+  "author": "Latheesan Kanesamoorthy <latheesan_k@hotmail.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/latheesan-k/elasticio-keenio-logger/issues"
+  },
+  "homepage": "https://github.com/latheesan-k/elasticio-keenio-logger#readme",
+  "dependencies": {
+    "keen-tracking": "^1.2.1"
+  }
+}
