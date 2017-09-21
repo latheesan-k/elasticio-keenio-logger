@@ -13,13 +13,15 @@ const keenioClient = new KeenTracking({
 });
 
 // Method to record error.
-module.exports.recordError = function({ taskName, errorMessage, stackTrace })
+module.exports.recordError = function({ orgName, taskName, msgBody, errorMessage, stackTrace })
 {
     // Finished
     return recordEvent('Elastic.IO Errors', {
-        taskName: taskName,
-        errorMessage: errorMessage,
-        stackTrace: stackTrace,
+        orgName: orgName || '-',
+        taskName: taskName || '-',
+        msgBody: msgBody || {},
+        errorMessage: errorMessage || '-',
+        stackTrace: stackTrace || '-'
     });
 };
 
@@ -32,7 +34,6 @@ function recordEvent(streamName, streamData)
         // Append elastic.io meta data to stream data
         streamData.meta = {
             ELASTICIO_ORGANIZATION_ID: process.env.ELASTICIO_ORGANIZATION_ID || '-',
-            ELASTICIO_ORGANIZATION_NAME: process.env.ELASTICIO_ORGANIZATION_NAME || '-',
             ELASTICIO_API_USERNAME: process.env.ELASTICIO_API_USERNAME || '-',
             ELASTICIO_TASK_ID: process.env.ELASTICIO_TASK_ID || '-',
             ELASTICIO_EXEC_ID: process.env.ELASTICIO_EXEC_ID || '-',
